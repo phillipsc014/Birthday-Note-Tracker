@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Birthday_Note_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AyM-4a-WVt">
+                                <rect key="frame" x="66" y="129" width="270" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Birthday" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4X5-mt-ryz">
+                                <rect key="frame" x="66" y="192" width="270" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hu-ke-gWt">
+                                <rect key="frame" x="66" y="397" width="77" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Save">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="saveClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7ya-DX-1Wr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5H5-aW-vwg">
+                                <rect key="frame" x="242" y="397" width="94" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Delete">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="deleteClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zoW-B9-dvw"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0f2-Rs-IVb">
+                                <rect key="frame" x="66" y="555" width="44.333333333333343" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birthday:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pBL-pT-hpZ">
+                                <rect key="frame" x="66" y="625" width="62" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5H5-aW-vwg" secondAttribute="bottom" constant="377" id="2ho-nH-bYb"/>
+                            <constraint firstItem="4X5-mt-ryz" firstAttribute="trailing" secondItem="5H5-aW-vwg" secondAttribute="trailing" id="Dsj-Ea-yf4"/>
+                            <constraint firstItem="AyM-4a-WVt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="66" id="F6X-qv-j7Z"/>
+                            <constraint firstItem="AyM-4a-WVt" firstAttribute="trailing" secondItem="4X5-mt-ryz" secondAttribute="trailing" id="Ica-AL-8vy"/>
+                            <constraint firstItem="AyM-4a-WVt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="LJ6-UC-3c7"/>
+                            <constraint firstItem="pBL-pT-hpZ" firstAttribute="top" secondItem="0f2-Rs-IVb" secondAttribute="bottom" constant="52" id="PvC-D8-LoH"/>
+                            <constraint firstItem="4X5-mt-ryz" firstAttribute="top" secondItem="AyM-4a-WVt" secondAttribute="bottom" constant="29" id="QgW-qZ-1uT"/>
+                            <constraint firstItem="0f2-Rs-IVb" firstAttribute="leading" secondItem="pBL-pT-hpZ" secondAttribute="leading" id="YCM-8Z-KPi"/>
+                            <constraint firstItem="4X5-mt-ryz" firstAttribute="leading" secondItem="2hu-ke-gWt" secondAttribute="leading" id="fXm-96-RNP"/>
+                            <constraint firstItem="5H5-aW-vwg" firstAttribute="leading" secondItem="2hu-ke-gWt" secondAttribute="trailing" constant="99" id="fho-Jq-CqR"/>
+                            <constraint firstItem="2hu-ke-gWt" firstAttribute="baseline" secondItem="5H5-aW-vwg" secondAttribute="baseline" id="hcL-BO-ncM"/>
+                            <constraint firstItem="AyM-4a-WVt" firstAttribute="leading" secondItem="4X5-mt-ryz" secondAttribute="leading" id="nz7-QH-gid"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pBL-pT-hpZ" secondAttribute="bottom" constant="175" id="uHR-5D-BnG"/>
+                            <constraint firstItem="2hu-ke-gWt" firstAttribute="leading" secondItem="0f2-Rs-IVb" secondAttribute="leading" id="vd0-5z-Zg1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="birthdayLabel" destination="pBL-pT-hpZ" id="6oI-D3-mek"/>
+                        <outlet property="birthdayTextField" destination="4X5-mt-ryz" id="23e-Ym-M9s"/>
+                        <outlet property="nameLabel" destination="0f2-Rs-IVb" id="dr1-lV-27s"/>
+                        <outlet property="nameTextField" destination="AyM-4a-WVt" id="v0v-pG-eOW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.824427480916029" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
